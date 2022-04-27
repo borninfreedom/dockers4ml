@@ -9,8 +9,29 @@ sudo nvidia-docker run -it -p 8022:22 darknet:latest bash
 ```
 
 # Use SSH
-First, enter the container of the darknet:latest image, then run
+如果在启动container时，不指定命令，那么就会启动ssh服务，如果指定了命令，那么需要手动执行启动ssh服务的命令。
+
+例如，使用如下指令启动container:
 ```bash
-service ssh start
+sudo nvidia-docker run -it -p 8022:22 --name darknet_latest  darknet:latest bash
 ```
-Now you can ssh into the container through `ssh root@your-host-machine-ip -p 8022`。
+这时候就会启动bash程序，而不会启动ssh服务，如果想使用ssh服务，需要在启动的container中手动执行`service ssh start`。
+
+如果执行`sudo nvidia-docker run -d -p 8022:22 --name darknet_latest  darknet:latest`，
+
+这时候就会自动启动ssh服务。
+
+If you do not specify a command when starting the container, the SSH service will be started. 
+
+If you specify a command, you need to manually execute the command to start the SSH service.
+
+For example, use the following command to start a container:
+```bash
+sudo nvidia-docker run -it -p 8022:22 --name darknet_latest  darknet:latest bash
+```
+At this time, the bash program will be started instead of the SSH service. 
+
+If you want to use the SSH service, you need to manually execute `service SSH start` in the started container.
+
+If you run `sudo nvidia-docker run -d -p 8022:22 --name darknet_latest  darknet:latest`,
+The SSH service will be started automatically at this time.
