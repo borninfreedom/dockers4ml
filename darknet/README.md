@@ -21,6 +21,8 @@ sudo nvidia-docker run -it -p 8022:22 --name darknet_latest  darknet:latest bash
 
 这时候就会自动启动ssh服务。
 
+---
+
 If you do not specify a command when starting the container, the SSH service will be started. 
 
 If you specify a command, you need to manually execute the command to start the SSH service.
