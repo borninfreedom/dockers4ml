@@ -37,3 +37,14 @@ If you want to use the SSH service, you need to manually execute `service SSH st
 
 If you run `sudo nvidia-docker run -d -p 8022:22 --name darknet_latest  darknet:latest`,
 The SSH service will be started automatically at this time.
+
+# Note
+**If you are not in Chinese Mainland, please comment out the line 18 and the line 36 of the Dockerfile.**
+The line 18 is:
+```bash
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && cp /sources.list /etc/apt/
+```
+The line 36 is:
+```bash
+RUN python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```

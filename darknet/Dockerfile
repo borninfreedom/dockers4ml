@@ -30,6 +30,11 @@ g++ \
 gcc \
 libopencv-dev
 
+#设置国内源
+#Set the Chinese pip source
+#If you are not in Chinese Mainland, please comment out this line of code.
+RUN python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
 RUN apt update && apt install -y openssh-server && \
 rm -rf /var/lib/apt/lists/*
 
