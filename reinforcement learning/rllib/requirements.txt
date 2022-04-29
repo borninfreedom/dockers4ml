@@ -1,0 +1,9 @@
+torch
+torchvision
+tensorflow
+ray
+ray[rllib]
+ray[tune]
+gym
+gym[classic_control]
+gym[box2d]
