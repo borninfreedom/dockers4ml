@@ -1,7 +1,11 @@
 **A collection of dockfiles for machine learning.**
 
 - [darknet](https://github.com/borninfreedom/dockers4ml/tree/main/darknet)
-
+- [reinforcement learning](https://github.com/borninfreedom/dockers4ml/tree/main/reinforcement%20learning)
+    - [spinningup](https://github.com/borninfreedom/dockers4ml/tree/main/reinforcement%20learning/spinningup)
+    - [stable baseline3](https://github.com/borninfreedom/dockers4ml/tree/main/reinforcement%20learning/stable%20baselines3)
+    - [rllib](https://github.com/borninfreedom/dockers4ml/tree/main/reinforcement%20learning/rllib)
+    
 **Some tips for using docker**
 
 * Clear unused mirrors
